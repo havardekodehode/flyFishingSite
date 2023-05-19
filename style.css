@@ -1,19 +1,140 @@
+:root{
+    /* Color palette */
+    --color1: #7d9bb3;
+    --color2: #3C3F2E;
+    --color3: #5CA4CE;
+    --color4: #131A0A;
+    --color5: #597A99;
+
+}
+
+*{
+	margin: 0px;
+}
+
+body{
+	background: linear-gradient(var(--color1),var(--color2));
+	background-repeat: no-repeat;
+	height: 1200px;
+}
 .topBar{
     display: flex;
     background-color: #333;
     height: 18px;
 }
 
+.hero{
+	position: relative;
+	width: 100%;
+	height: 300px;
+  }
+
+  h1{
+	font-size: 5rem;
+  }
+
+  h2{
+	font-size: 2rem;
+  }
+
+  .heroText{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	text-align: center;
+	color: #eee;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	backdrop-filter: blur(2px);
+	border-radius: 55px;
+  }
+
+  .navBar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color2);
+	height: 45px;
+	width: 100%;
+  }
+
+  .navBar ul{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	list-style-type: none;
+	width: 100%;
+	
+  }
+
+  .navBar ul li{
+	color: #eee;
+	border: solid #eee 1px;
+	padding: 5px 50px;
+	margin-right: 40px;
+  }
+
+  .newAccount{
+	border: solid #eee 1px;
+	padding: 5px 50px;
+	margin-right: 40px;
+	color: none;
+	position: relative;
+	justify-content: end;
+  }
+
+  .main{
+	display: flex;
+	justify-content: space-evenly;
+	padding: 30px;
+	background: unset;
+  }
+
+  .scoreboard{
+	border: solid var(--color4) 1px;
+	color: var(--color4);
+	text-shadow: var(--color4) 0.1px 0.5px 1x;
+	font-size: 1.5rem;
+	font-weight: bold;
+	width: 30%;
+	padding: 10px;
+	/* background-color: palegoldenrod */
+  }
+
+  .scoreboard ol li{
+	margin-top: 9px;
+	border-bottom: var(--color4) solid 3px;
+	width: fit-content;
+  }
+
+  .form{
+	width: 40%;
+
+  }
+
+  .form form fieldset{
+	display: flex;
+	flex-direction: column;
+  }
+
+  .form form fieldset button{
+	margin-top: 45px;
+  }
+
 /*
 essential styles:
 these make the slideshow work
 */
 #slides{
-	position: relative;
+	position: absolute;
 	height: 300px;
+	width: 100%;
 	padding: 0px;
 	margin: 0px;
 	list-style-type: none;
+	z-index: 1;
+
 }
 
 .slide{
@@ -23,7 +144,7 @@ these make the slideshow work
 	width: 100%;
 	height: 100%;
 	opacity: 0;
-	z-index: 1;
+	z-index: 0;
 
 	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
@@ -68,7 +189,7 @@ just for appearance; change whatever you want
 .slide:nth-of-type(2){
 	background-color: orange;
   background-image: url('Images/hiking.jpg');
-  background-position: center bottom;
+  background-position: left center;
 
 }
 
@@ -86,10 +207,6 @@ just for appearance; change whatever you want
 .controls:focus{
   background: #eee;
   color: #333;
-}
-
-.container{
-  position: relative;
 }
 
 .buttons{

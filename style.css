@@ -93,7 +93,7 @@ body{
 
   .scoreboard{
 	border: solid var(--color4) 1px;
-	color: white;
+	color: var(--color4);
 	text-shadow: var(--color4) 0.1px 0.5px 1x;
 	font-size: 1.5rem;
 	font-weight: bold;

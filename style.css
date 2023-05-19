@@ -1,0 +1,101 @@
+.topBar{
+    display: flex;
+    background-color: #333;
+    height: 18px;
+}
+
+/*
+essential styles:
+these make the slideshow work
+*/
+#slides{
+	position: relative;
+	height: 300px;
+	padding: 0px;
+	margin: 0px;
+	list-style-type: none;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+
+
+.controls{
+	display: none;
+}
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+	font-size: 40px;
+	padding: 40px;
+	box-sizing: border-box;
+	background: #333;
+	color: #fff;
+  
+  background-size: cover;
+}
+
+
+.slide:nth-of-type(1){
+	background-color: red;
+  background-image: url('Images/trout.jpg');
+  background-position: center ;
+}
+
+
+.slide:nth-of-type(2){
+	background-color: orange;
+  background-image: url('Images/hiking.jpg');
+  background-position: center bottom;
+
+}
+
+
+.slide:nth-of-type(3){
+	background-color: green;
+  background-image: url('Images/deer.jpg');
+  background-position: center ;
+
+}
+
+
+
+.controls:hover,
+.controls:focus{
+  background: #eee;
+  color: #333;
+}
+
+.container{
+  position: relative;
+}
+
+.buttons{
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  font-size: 0px;
+}

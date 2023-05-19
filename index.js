@@ -53,3 +53,9 @@ previous.onclick = function(){
 	pauseSlideshow();
 	previousSlide();
 };
+
+//newAccount button
+const newAccount = document.getElementById("newAccount");
+
+newAccount.addEventListener("click")
+
